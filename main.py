@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from database import salvar_dados, carregar_dados
 
 def menu():
@@ -34,3 +35,6 @@ def main():
     
 if __name__ == "__main__":
     main()
+=======
+print("projeto testes")
+>>>>>>> cd85d9ad778a0b734e153c7dfb28d00d81d4e094giyt
