@@ -3,3 +3,7 @@
 12233
 1222,msei,pitbull,13,masculino,medio,preto,disponivel,22/02/2025
 122, x , 
+python -u "c:\Users\Notebook\Documents\SGRAA---TESTES\main.py"
+python -u "c:\Users\Notebook\Documents\SGRAA---TESTES\main.py"
+asd
+1231231, ,
