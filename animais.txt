@@ -1,5 +1,5 @@
-23333, gato , pitbull, 2, masculino, medio, preto, bom, 23/02/2025
 
+<<<<<<< HEAD
 12233
 1222,msei,pitbull,13,masculino,medio,preto,disponivel,22/02/2025
 122, x , 
@@ -7,3 +7,5 @@ python -u "c:\Users\Notebook\Documents\SGRAA---TESTES\main.py"
 python -u "c:\Users\Notebook\Documents\SGRAA---TESTES\main.py"
 asd
 1231231, ,
+=======
+>>>>>>> a88f3012f296aa1873e05b1bc9ea32e6b2857832
