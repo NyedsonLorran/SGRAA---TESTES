@@ -11,3 +11,6 @@ class Pretendente:
 
     def get_dados(self):
         return (self.__id, self.__nome, self.__contato, self.__endereco)
+
+    def getAdocoes(self):
+        return self.__adocoes

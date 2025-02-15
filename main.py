@@ -1,4 +1,4 @@
-from Menu import Menu
+from menu import Menu
 
 def main():
     print("Sistema de Gestão do Centro de Adoção inicializado.")

@@ -8,3 +8,13 @@ def carregar_dados(arquivo):
             return f.readlines()
     except FileNotFoundError:
         return []
+
+def buscar_dado(arquivo, termo):
+    try:
+        with open(arquivo, 'r') as f:
+            for linha in f:
+                if termo in linha:
+                    return linha.strip()
+    except FileNotFoundError:
+        return None
+    return None

@@ -1,9 +1,19 @@
-from database import salvar_dados, carregar_dados
+from database import salvar_dados, carregar_dados, buscar_dado 
+
 
 class Menu:
+    def coletarDadosAdocao(self, arquivo, termo ):
+        try:
+            with open(arquivo, 'r') as f:
+                for linha in f:
+                    if termo in linha:
+                        return linha.strip()
+        except FileNotFoundError:
+            return None
+        return None
 
     def coletarDadosPretendente(self):
-        tipos = ["informações pessoais", "nome", "contato", "endereço"]
+        tipos = ["id" ,"informações pessoais", "nome", "contato", "endereço"]
         concatena = ""
         for i in range(0,(len(tipos))):
             inf = input(f"informe o {tipos[i]}: ")
@@ -31,6 +41,20 @@ class Menu:
         return concatena
 
     def coletarDadosVoluntario(self):
+        tipos = ["id", "nome", "contato", "funcao"]
+        concatena = ""
+        for i in range(0,len(tipos)):
+            inf = input(f"informe o {tipos[i]}: ")
+            if inf == "0":
+                inf = " "
+                pass
+            elif inf == "00":
+                inf = " "
+                break
+            concatena += (inf + ",")
+        return concatena
+
+    def coletarDadosDoacao(self):
         tipos = ["id", "nome", "contato", "funcao"]
         concatena = ""
         for i in range(0,len(tipos)):
@@ -78,9 +102,13 @@ class Menu:
                 salvar_dados("pretendente.txt", dados)
             elif opcao == "6":
                 print("Pretendentes cadastrados:")
-                print(''.join(carregar_dados("voluntarios.txt")))
+                print(''.join(carregar_dados("pretendente.txt")))
             elif opcao == "7":
-                print("Registrar Doação")
-                pass
+                termo = input("Digite o id do pretendente a buscar: ")
+                resultado = buscar_dado("animais.txt", termo)
+                if resultado:
+                    print("Dado encontrado:", resultado)
+                else:
+                    print("Dado não encontrado.")
             else:
                 print("Opção inválida! Tente novamente.")
